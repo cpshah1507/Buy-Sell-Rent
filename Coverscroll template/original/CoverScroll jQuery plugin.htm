@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0048)http://slobodan.99k.org/plugins/coverscroll.html -->
+<!DOCTYPE html><HTML><HEAD><TITLE>CoverScroll jQuery plugin</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<STYLE>	
+			body{
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			#shelf{
+				width:900px;
+				height:210px;
+				background: url("/images/shelf-bg.png") no-repeat scroll 0 -25px transparent;
+			}
+			#container{
+				/*border:1px solid magenta;*/
+				width:850px;
+				height:160px;
+				margin-left:25px;
+			}
+			
+			#container img, #container .item{
+				width:100%;
+				height:100%;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-o-border-radius: 10px;
+				border-radius: 10px;
+				-moz-box-shadow: 0px 5px 5px #777;
+				-webkit-box-shadow: 0px 5px 5px #777;
+				box-shadow: 0px 5px 5px #777;
+			}
+			.itemTitle{
+				padding-top:30px;
+			}
+			#container .selectedItem{
+				-moz-box-shadow: 0 4px 10px #0071BC;
+				-webkit-box-shadow: 0 4px 10px #0071BC;
+				box-shadow: 0 4px 10px #0071BC;
+				border:1px solid #0071BC;
+			}
+			
+			
+			#container2{
+				/*border:1px solid magenta;*/
+				width:850px;
+				height:200px;
+				margin-left:25px;
+			}
+			#container2 img, #container2 .item{
+				width:100%;
+				height:100%;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-o-border-radius: 10px;
+				border-radius: 10px;
+				-moz-box-shadow: 0px 5px 5px #777;
+				-webkit-box-shadow: 0px 5px 5px #777;
+				box-shadow: 0px 5px 5px #777;
+			}
+			
+			#container .item{
+				width:160px;
+				height:160px;
+				left:0px;
+			}
+			
+			/*#container2 .selectedItem{
+				
+				border:2px solid #0071BC;
+			}*/
+			
+			
+			
+.similarity{
+	bottom: 5%;
+    position: absolute;
+    right: 5%;        
+    font-size: 2.5em;
+    *font-size: 1.3em;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+}
+.similarity {
+    -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	background: #84C440; /* old browsers */
+    background: -moz-linear-gradient(top, #84C440 0%, #3CB64A 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#84C440), color-stop(100%,#3CB64A)); /* webkit */
+    -webkit-box-shadow: inset 0px 1px 0px #a1d269;
+    -moz-box-shadow: inset 0px 1px 0px #a1d269;
+    box-shadow: inset 0px 1px 0px #a1d269; 
+    border-color:#8cc63f #6dc043 #359541 #6dc043;
+    border-width:1px;
+    border-style:solid;
+    color:#fff;
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+    padding:3px 6px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.similarity:hover {
+    background: #bbde51;
+    border-color:#bbde51 #bbde51 #9eba45 #bbde51;
+    -webkit-box-shadow: inset 0px 1px 0px #cde671;
+    -moz-box-shadow: inset 0px 1px 0px #cde671;
+    box-shadow: inset 0px 1px 0px #cde671; 
+    cursor:pointer;
+}
+			
+			
+		</STYLE>
+
+<SCRIPT type="text/javascript" src="CoverScroll%20jQuery%20plugin_files/jquery.min.js"></SCRIPT>
+
+<SCRIPT src="CoverScroll%20jQuery%20plugin_files/jquery.coverscroll.min.js"></SCRIPT>
+
+<META name="GENERATOR" content="MSHTML 9.00.8112.16421"></HEAD>
+<BODY>
+<H1>CoverScroll jQuery plugin</H1>		by <STRONG>Slobodan Jovanovic</STRONG>
+<P>			This is a CSS3 variant of the Apple's CoverFlow design pattern		</P>
+<P>
+<H3>Usage</H3>
+<OL>
+  <LI>
+  <H4>HTML</H4><TEXTAREA style="width: 400px; height: 100px;">&lt;div id="container"&gt;
+	&lt;img src="img1.jpg" /&gt;
+	&lt;img src="img2.jpg" /&gt;
+	&lt;img src="img3.jpg" /&gt;
+	&lt;img src="img4.jpg" /&gt;
+&lt;/div&gt;</TEXTAREA></LI>
+  <LI>
+  <H4>JavaScript</H4><PRE>	$('#container').coverscroll();
+</PRE><STRONG>OR</STRONG><PRE>	$('#container').coverscroll({items:'img'});
+</PRE>Where value of "items" 
+  option is a jQuery selector for descendent elements of the container element 
+  (like in: <STRONG>$('#container').find('img');</STRONG>).  This is only 
+  necessary in case when item elements are other than img element (for example 
+  if you want to use div-s as CoverScroll items).				</LI></OL>
+<P></P>
+<P>
+<H3>Options</H3>			These are the default options:			<PRE>  var opt = {
+    'minfactor':20, // how much is the next item smaller than previous in pixels
+    'distribution':1.5, // how apart are the items (items become separated when this value is below 1)
+    'scalethreshold':0, // after how many items to start scaling
+    'staticbelowthreshold':false, // if true when number of items is below "scalethreshold" - don't animate 
+    'titleclass':'itemTitle', // class name of the element containing the item title
+    'selectedclass':'selectedItem', // class name of the selected item
+    'scrollactive':true, // scroll functionality switch
+    'step':{ // compressed items on the side are steps
+    	'limit':4, // how many steps should be shown on each side
+    	'width':8, // how wide is the visible section of the step in pixels
+    	'scale':true // scale down steps
+    },
+    'bendamount':2, // amount of "bending" of the CoverScroll (values 0.1 to 1 bend down, -0.1 to -1 bend up, 2 is straight (no bending), 1.5 sligtly bends down)
+  	'movecallback':function(item){} // callback function triggered after click on an item - parameter is the item's jQuery object
+  };
+		     </PRE>
+<P></P>
+<P>
+<H3>Methods</H3>			This is a list of methods supported:			
+<OL>
+  <LI><STRONG>next</STRONG> - moves to next item<BR><PRE>$('#container').coverscroll('next');
+					</PRE></LI>
+  <LI><STRONG>prev</STRONG> - moves to previous item<BR><PRE>$('#container').coverscroll('prev');
+					</PRE></LI></OL>
+<P></P>
+<P>
+<H3>Example</H3><PRE>  $('#container').coverscroll();
+			</PRE>
+<DIV id="container2"><IMG title="title #1" src="CoverScroll%20jQuery%20plugin_files/blockpage.gif"><IMG 
+title="title #2" src="CoverScroll%20jQuery%20plugin_files/nike1.jpg"><IMG 
+title="title #3" src="CoverScroll%20jQuery%20plugin_files/nike2.jpg"><IMG 
+title="title #4" src="CoverScroll%20jQuery%20plugin_files/nike3.jpg"><IMG 
+title="title #5" src="CoverScroll%20jQuery%20plugin_files/nike4.jpg"><IMG 
+title="title #6" src="CoverScroll%20jQuery%20plugin_files/nike5.jpg"><IMG 
+title="title #7" src="CoverScroll%20jQuery%20plugin_files/blockpage(6).gif"><IMG 
+title="title #8" src="CoverScroll%20jQuery%20plugin_files/blockpage(7).gif"><IMG 
+title="title #9" src="CoverScroll%20jQuery%20plugin_files/blockpage(8).gif"><IMG 
+title="title #10" 
+src="CoverScroll%20jQuery%20plugin_files/blockpage(9).gif"><IMG title="title #11" 
+src="CoverScroll%20jQuery%20plugin_files/blockpage(10).gif"><IMG title="title #12" 
+src="CoverScroll%20jQuery%20plugin_files/blockpage(11).gif"><IMG title="title #13" 
+src="CoverScroll%20jQuery%20plugin_files/blockpageCA0FNQMW.gif"><IMG title="title #14" 
+src="CoverScroll%20jQuery%20plugin_files/blockpage(12).gif"><!--
+					--></DIV>
+<SCRIPT>
+				$('#container2').coverscroll();
+			</SCRIPT>
+<BR><BR><BR><BR>
+<P></P>
+<P>
+<H3>More complex example (shelf)</H3>
+<H4>HTML</H4><TEXTAREA style="width: 900px; height: 100px;">&lt;div id="shelf"&gt;
+ &lt;div id="container"&gt;
+  &lt;div class="item"&gt;&lt;img style="width:100%,height:100%" src="image.jpg" /&gt;&lt;div class="itemTitle"&gt;the title 1&lt;/div&gt;&lt;/div&gt;
+  &lt;!--rest of the items--&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</TEXTAREA>
+<H4>JavaScript</H4><PRE>  $('#container').coverscroll({
+  	items:'.item', 
+  	minfactor:10, 
+  	scalethreshold:5, 
+  	staticbelowthreshold:true, 
+  	distribution:1, 
+  	bendamount:1.5, 
+  	movecallback:getStatus
+  });
+			</PRE>
+<DIV id="shelf">
+<DIV id="container">
+<DIV class="item"><IMG src="CoverScroll%20jQuery%20plugin_files/blockpage.gif">
+<DIV class="similarity">05</DIV>
+<DIV class="itemTitle">the title 1</DIV></DIV><!--
+					--></DIV></DIV>
+<SCRIPT>
+				$('#container').coverscroll({items:'.item', minfactor:10, scalethreshold:5, staticbelowthreshold:true, distribution:1});
+				
+				// demo that dynamically adds items to the CoverScroll
+				var cnt = 0;
+				var aitems = [
+					'<div class="item"><img src="http://farm6.static.flickr.com/5230/5693758060_91eff4499b_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 2</div></div>',
+					'<div class="item"><img src="http://farm6.static.flickr.com/5021/5693757324_a2653daf60_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 3</div></div>',
+					'<div class="item"><img src="http://farm6.static.flickr.com/5267/5693211761_cbd05e7ae9_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 4</div></div>',
+					'<div class="item"><img src="http://farm6.static.flickr.com/5104/5693526710_03bcbe6bab_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 5</div></div>',
+					'<div class="item"><img src="http://farm6.static.flickr.com/5145/5693803258_5472912b51_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 6</div></div>',
+					'<div class="item"><img src="http://farm4.static.flickr.com/3374/5698045574_3354003589_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 7</div></div>',
+					'<div class="item"><img src="http://farm3.static.flickr.com/2030/5699531570_c0a355c4ac_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 8</div></div>',
+					'<div class="item"><img src="http://farm6.static.flickr.com/5189/5699531470_3085ebe468_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 9</div></div>',
+					'<div class="item"><img src="http://farm6.static.flickr.com/5304/5698970073_91aaefda31_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 10</div></div>',
+					'<div class="item"><img src="http://farm3.static.flickr.com/2482/5699496846_9754152497_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 11</div></div>',
+					'<div class="item"><img src="http://farm6.static.flickr.com/5309/5699391678_8ef244e7fb_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 12</div></div>',
+					'<div class="item"><img src="http://farm3.static.flickr.com/2138/5698956375_6d8f872c94_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 13</div></div>',
+					'<div class="item"><img src="http://farm3.static.flickr.com/2730/5699523404_5da31ce2ba_m.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 14</div></div>'
+				];
+				function addItem(){
+					$('#container').append(aitems[cnt]);
+					$('#container').coverscroll({items:'.item', minfactor:10, scalethreshold:5, staticbelowthreshold:true, distribution:1, bendamount:1.5, movecallback:getStatus});
+					cnt++;
+					if(cnt >= aitems.length){cnt=0}
+				}
+				function getStatus(){
+					var stats =  ($('#container .selectedItem').index()+1)+' of '+$('#container .item').length;
+					$('#stats').html(stats);
+				}
+			</SCRIPT>
+
+<P style="width: 900px; text-align: center;"><A onclick="$('#container').coverscroll('prev')" 
+href="javascript:;">previous</A>&nbsp;<SPAN id="stats"></SPAN>&nbsp;<A onclick="$('#container').coverscroll('next')" 
+href="javascript:;">next</A><BR><BR><BUTTON onclick="addItem()">Add 
+Item</BUTTON></P>
+<P>				Adding items shows how CoverScroll starts behaving differently when there 
+are more than five items in the "shelf".			</P>
+<P></P></BODY></HTML>

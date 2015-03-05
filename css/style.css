@@ -1,0 +1,223 @@
+html,body {margin:0px;padding:0px;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif}
+
+/*  ---------------------------------------------------Home Page ------------------------------------------*/
+.homePage .wrapper {height:600px;min-width:800px;width:100%;background-image:url('../images/home-page-bg.jpg');background-repeat:no-repeat;margin:auto;position:relative;background-size: 100% 100%}
+.homePage .header {height:50px;width:98%;min-width:784px}
+.homePage .floatLeft {float:left;}
+.homePage .heading {height:30px;width:100px;float:right;padding-top:10px;margin-top:10px;position:relative;}
+
+.homePage .heading a {text-decoration: none;color:white;margin-left:25px;}
+.homePage .heading.signInBtn a {color:white;}
+.homePage .heading.signInBtn {background-color: rgb(30, 28, 28);border-radius:5px;background-image:linear-gradient(to bottom, rgb(30, 28, 28), rgb(30, 28, 28));padding-top:0px;display: inline-block;margin-top:15px}
+.homePage .heading.signInBtn:hover {cursor: pointer}
+.homePage .heading.signInBtn .signInLink {height:25px;display: inline-block;margin-left:0px;padding-left:25px;padding-top:5px;width:75px}
+
+
+.homePage .heading a:hover {text-decoration: underline}
+.homePage .heading.signInBtn a:hover {text-decoration: none}
+.homePage .signInBox {display:none;position:absolute;right:2%;top:45px;height:100px;width:280px;background-color: rgb(30, 28, 28);border-radius:5px;background-image:linear-gradient(to bottom, rgb(30, 28, 28), rgb(30, 28, 28));color:white;padding:5px;padding-left:15px;}
+.homePage .signInBox .signInEmailWrapper, .homePage .signInBox .signInPasswordWrapper {width:280px;float:left;}
+.homePage .signInBox .signInEmailLabel, .homePage .signInBox .signInPasswordLabel {width:100px;}
+.homePage .signInBox .signInEmail, .homePage .signInBox .signInPassword {width:150px;}
+.homePage .signInBox .signInSubmitBtn {color:white;font-size:16px;width:80px;float:left;margin-top:10px;height:40px;margin-left:10px;border-radius: 5px;background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */}
+
+
+.homePage .signInBox .signInSubmitBtn:active {background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 13%, #666666 19%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 74%, #1c1c1c 84%, #131313 87%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(13%,#595959), color-stop(19%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(74%,#2b2b2b), color-stop(84%,#1c1c1c), color-stop(87%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* IE10+ */
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */}
+
+
+.homePage .gettingStartedBox {position: absolute;right:100px;top:200px;height:275px;width:400px;background-color:#333;border-radius: 10px}
+.homePage .gettingStartedBox .schoolChoiceWrapper {width:400px;float: left;padding-top:40px}
+.homePage .gettingStartedBox .schoolLabel {float:left;width:250px;margin-left:50px;font-size: 20px;color:white}
+.homePage .gettingStartedBox .schoolChoices {float:left;width:250px;height: 25px;overflow: hidden;background: url('../images/down_arrow_select.jpg') no-repeat right #ddd;border: 1px solid #ccc;margin-left:40px;margin-top:20px;border-radius: 5px}
+.homePage .gettingStartedBox .schoolChoices select {background: transparent;width: 250px;padding-left: 5px;font-size: 16px;border: 0;border-radius: 0;height: 25px;-webkit-appearance: none;color:black;cursor: pointer}
+
+.homePage .gettingStartedBox .getStartedBtnWrapper {width:400px;float:left;margin-top:30px;height:50px}
+.homePage .gettingStartedBox .signUpBtnWrapper {margin-top:5px;height:50px;width:400px;float: left}
+.homePage .gettingStartedBox .getStartedBtn, .homePage .gettingStartedBox .signUpBtn {width:100px;float:left;height:50px;margin-left:50px;border-radius: 5px;background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}
+.homePage .gettingStartedBox .getStartedBtn:hover,  .gettingStartedBox .signUpBtn:hover{cursor: pointer}
+.homePage .gettingStartedBox .getStartedBtn:active, .gettingStartedBox .signUpBtn:active {background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 13%, #666666 19%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 74%, #1c1c1c 84%, #131313 87%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(13%,#595959), color-stop(19%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(74%,#2b2b2b), color-stop(84%,#1c1c1c), color-stop(87%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* IE10+ */
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}
+.homePage .gettingStartedBox .getStartedBtn a, .gettingStartedBox .signUpBtn a {color:white;padding-left:10px;text-decoration: none;padding-top:13px;display: inline-block;height: 37px;width:90px}
+.homePage .gettingStartedBox .signUpBtnWrapper p {width:200px;color:white;padding-left:45px;font-size:18px;float: left}
+.homePage .gettingStartedBox .signUpBtn {margin-left:10px}
+.homePage .gettingStartedBox .signUpBtn a {padding-left:20px;width:80px;}
+
+
+/*  ---------------------------------------------------Sign Up Page ------------------------------------------*/
+
+.signUpPage input {width:150px}
+.signUpPage .phoneNumber {width:50px}
+.signUpPage .emailError {color:red;margin:0;display:none;height:30px;width:200px;}
+
+
+/* ---------------------------------------------------Common Wrapper of BSR Page -----------------------------*/
+.BSRPage .wrapper {height:800px;width:100%;margin:auto;}
+	
+.BSRPage .header {height:50px;width:98%;float:left;}
+.BSRPage .floatLeft {float:left;}
+.BSRPage .heading {height:30px;width:100px;float:right;padding-top:10px;margin-top:10px;position:relative;}
+
+.BSRPage .heading a {text-decoration: none;-moz-border-radius:white;margin-left:25px;color:black;}
+
+.BSRPage .heading.signInBtn {background-color: rgb(30, 28, 28);border-radius:5px;background-image:linear-gradient(to bottom, rgb(30, 28, 28), rgb(30, 28, 28));padding-top:0px;display: inline-block;margin-top:15px}
+.BSRPage .heading.signInBtn a {color:white;}
+.BSRPage .heading.signInBtn:hover {cursor: pointer}
+.BSRPage .heading.signInBtn .signInLink {height:25px;display: inline-block;margin-left:0px;padding-left:25px;padding-top:5px;width:75px}
+
+
+.BSRPage .heading a:hover {text-decoration: underline}
+.BSRPage .heading.signInBtn a:hover {text-decoration: none}
+.BSRPage .signInBox {display:none;position:absolute;right:2%;top:45px;height:100px;width:280px;background-color: rgb(30, 28, 28);border-radius:5px;background-image:linear-gradient(to bottom, rgb(30, 28, 28), rgb(30, 28, 28));color:white;padding:5px;padding-left:15px;}
+.BSRPage .signInBox .signInEmailWrapper, .BSRPage .signInBox .signInPasswordWrapper {width:280px;float:left;}
+.BSRPage .signInBox .signInEmailLabel, .BSRPage .signInBox .signInPasswordLabel {width:100px;}
+.BSRPage .signInBox .signInEmail, .BSRPage .signInBox .signInPassword {width:150px;}
+.BSRPage .signInBox .signInSubmitBtn {color:white;font-size:16px;width:80px;float:left;margin-top:10px;height:40px;margin-left:10px;border-radius: 5px;background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */}
+
+
+.BSRPage .signInBox .signInSubmitBtn:active {background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 13%, #666666 19%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 74%, #1c1c1c 84%, #131313 87%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(13%,#595959), color-stop(19%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(74%,#2b2b2b), color-stop(84%,#1c1c1c), color-stop(87%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* IE10+ */
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 13%,#666666 19%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 74%,#1c1c1c 84%,#131313 87%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */}
+
+.BSRPage .uniTitleWrapper {height:50px;width:98%;float:left;border:1px solid black;margin-left:10px;}
+.BSRPage .uniTitle {height:40px;width:auto;margin:auto;text-align:center;font-size:20px;padding-top:10px;}
+
+.BSRPage .tabBodyWrapper {width:98%;float:left;margin-left:10px;}
+.BSRPage .tabsWrapper {width:100%;height:50px;background-color:white;border:1px solid black;float:left;}
+.BSRPage .tabsWrapper .tab {width:33.3%;float:left;font-size:18px;cursor:pointer;height:50px;text-align:center;font-weight:bold;}
+.BSRPage .tabsWrapper .tab a {text-decoration:none;color:black;width:100%;display:inline-block;height:38px;padding-top:12px;}
+.BSRPage .tabBodyWrapper .tabContent {width:100%;min-height:600px;}
+
+/*  --------------------------------------------------- Buy Page ------------------------------------------*/
+
+
+.buyPage .tabBodyWrapper .tabContent .categories {width:18%;float:left;height:600px;border:1px solid black;padding:5px;font-size:20px;}
+.buyPage .tabBodyWrapper .tabContent .fixedcategories {position:fixed;top:0px;;}
+
+.buyPage .tabContent .categories .category h3 {cursor:pointer;font-size:18px;}
+.buyPage .tabContent .buyBodyContent {width:80%;float:right;height:600px;}
+.buyPage .tabContent .buyBodyContent .sortSettings {width:100%;float:right;height:50px;}
+.buyPage .tabContent .buyBodyContent .sortSettings .sortByUserRating {width:300px;height:35px;margin-right:2%;margin-top:15px;float:right;font-size:18px;}
+.buyPage .tabContent .buyBodyContent .sortSettings .sortByUserRating .sellerRatingOption,
+.buyPage .tabContent .buyBodyContent .sortSettings .sortByUserRating .recentPostsOption
+{background-color:#CCC;border:none;border-radius:5px;font-size:15px;cursor:pointer;}
+.buyPage .tabContent .buyBodyContent .sortSettings .sortByUserRating .selectedOption
+{background-color:#333;color:#FFF;}	
+
+.buyPage .buyBodyContent .sortSettings .localSearchWrapper {float:right;width:40%;margin-top:15px;height:30px;}
+.buyPage .buyBodyContent .sortSettings .localSearchWrapper .searchText {float:left;margin-right:10px;margin-top:2px;}
+.buyPage .buyBodyContent .sortSettings .localSearchWrapper .searchInput {float:left;width:150px;}
+
+
+.buyPage .buyBodyContent .sellerPostWrapper {width:100%;float:right;}
+.buyPage .buyBodyContent .sellerPostWrapper .noRecordsFound {margin-top:10px;margin-left:10px;font-weight:bold;font-size:18px;}
+.buyPage .buyBodyContent .sellerPost {width:100%;float:right;border:1px solid black;height:200px;}
+.buyPage .buyBodyContent .sellerPost .postImage {width:20%;height:190px;padding:5px;float:left;}
+.buyPage .buyBodyContent .sellerPost .postDetails {width:65%;height:200px;padding:5px;margin-left:10%;float:left;}
+.buyPage .buyBodyContent .sellerPost .postHeading {font-size:18px;}
+.buyPage .buyBodyContent .sellerPost .postDescription {height:30px;}
+.buyPage .buyBodyContent .sellerPost .postedBy {font-size:16px;color:#FA3;}
+.buyPage .buyBodyContent .sellerPost .price {font-size:18px;margin-top:10px;}
+.buyPage .buyBodyContent .sellerPost .buyButton {background-color:#ADA;border:none;border-radius:5px;color:white;font-size:18px;margin-top:10px;cursor:pointer;}
+
+
+/*  --------------------------------------------------- Sell Page ------------------------------------------*/
+
+.sellPage .tabContent .sellBodyContent {width:80%;float:right;height:auto;border:1px solid black;}
+.sellPage .tabContent .categories {width:18%;float:left;height:600px;border:1px solid black;padding:5px;font-size:20px;}
+.sellPage .tabContent .fixedcategories {position:fixed;top:0px;;}
+
+.sellPage .tabContent .categories .category h3 {cursor:pointer;font-size:18px;}
+.sellPage .tabContent .sellBodyContent .itemNameWrapper {width:100%;height:60px;float:left;}
+.sellPage .tabContent .sellBodyContent .itemNameWrapper .itemNameLabel {float:left;margin-left:10px;}
+.sellPage .tabContent .sellBodyContent .itemNameWrapper .itemName {float:left;margin-left:30px;margin-top:17px;height:30px;font-size:18px;width:60%;border-radius:5px}
+
+.sellPage .tabContent .sellBodyContent .itemValueWrapper {width:100%;height:60px;float:left}
+.sellPage .tabContent .sellBodyContent .itemValueWrapper .itemValueLabel {float:left;margin-left:10px;}
+.sellPage .tabContent .sellBodyContent .itemValueWrapper .itemValue {float:left;margin-left:20px;margin-top:17px;height:30px;font-size:18px;width:10%;border-radius:5px;}
+
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper {width:100%;height:260px;float:left}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .itemCategoryLabel {float:left;margin-left:10px;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .itemCategoryValue {float:left;margin-left:75px;margin-top:26px;height:30px;font-size:18px;width:15%;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper {float:left;margin-left:75px;margin-top:23px;height:200px;font-size:18px;width:45%;border:1px solid #ccc;border-radius:5px;}
+
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper .categoryList {padding-left:5px;height:120px;width:95%;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper .categoryList li {list-style:none;float:left;margin-left:10px;background-color:#555;color:#FFF;padding:5px;margin-bottom:10px;font-size:16px;border-radius:5px;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper .categoryList li .cancelItem {cursor:pointer;border-radius:5px;border:1px solid #CCC;margin-left:5px;width:13px;display:inline-block;padding-left:3px;font-size:15px;}
+
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper .manualCategoryWrapper {padding-left:15px;height:35px;width:95%;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper .manualCategoryWrapper label {font-weight:bold;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper .manualCategoryWrapper input {border-radius:5px;font-size:18px;}
+
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .suggestedCategory {width:300px;height:200px;border-radius:5px;border:solid 1px #ccc;float:left;margin-left:20px;margin-top:23px;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .suggestedCategory h3 {margin-left:20px;}
+
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .suggestedCategoryList {padding-left:5px;height:120px;width:95%;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .suggestedCategoryList li {list-style:none;float:left;margin-left:10px;background-color:#555;color:#FFF;padding:5px;margin-bottom:10px;font-size:16px;border-radius:5px;cursor:pointer;}
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .suggestedCategoryList li .addItem {cursor:pointer;border-radius:5px;border:1px solid #CCC;margin-left:5px;width:13px;display:inline-block;padding-left:3px;font-size:15px;}
+
+.sellPage .tabContent .sellBodyContent .itemCategoryWrapper .selectedCategoryWrapper .manualCategoryWrapper .addCategoryBtn {height:30px;width:45px;border-radius:5px;display:inline-block;margin-bottom:10px;cursor:pointer;font-size:13px;margin-left:5px;}
+
+.sellPage .tabContent .sellBodyContent .itemDescriptionWrapper {float:left;width:98%;height:auto;}
+.sellPage .tabContent .sellBodyContent .itemDescriptionWrapper h2 {float:left;margin-left:10px;}
+.sellPage .tabContent .sellBodyContent .itemDescriptionWrapper .description {height:300px;width:50%;float:left;margin-left:48px;border:2px solid #ccc;border-radius:5px;font-size:16px;max-width:70%;}
+
+.sellPage .tabContent .sellBodyContent .itemImageWrapper {float:left;width:98%;height:150px;}
+.sellPage .tabContent .sellBodyContent .itemImageWrapper h2 {margin-left:10px}
+
+.sellPage .tabContent .sellBodyContent .createPostWrapper {float:left;width:98%;height:40px;}
+.sellPage .tabContent .sellBodyContent .createPostWrapper button {margin:auto;width:140px;font-size:15px;font-weight:bold;border-radius:5px;margin-left:40%;cursor:pointer;}
+
+@media all and (max-width: 768px){
+.buyPage .buyBodyContent .sellerPost .postDetails {margin-left:15%;width:50%;}
+}
+
+/*  --------------------------------------------------- Sell Page ------------------------------------------*/
+
+.postDetailsPage .tabContent .postDetailsContent {width:80%;float:right;height:auto;border:1px solid black;}
+.postDetailsPage .tabContent .categories {width:18%;float:left;height:600px;border:1px solid black;padding:5px;font-size:20px;}
+.postDetailsPage .tabContent .fixedcategories {position:fixed;top:0px;;}
+
+.postDetailsPage .tabContent .categories .category h3 {cursor:pointer;font-size:18px;}
+
+.postDetailsPage .tabContent .postDetailsContent h1 {text-align:center;}

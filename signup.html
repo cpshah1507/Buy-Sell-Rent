@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5//EN"
+    "http://www.w3.org/TR/html5/html5.dtd"
+    >
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="Buy Rent Sell Website for shopping in University. Sign Up for creating your account" />
+    <meta name="keywords" content="Buy Rent Sell University Community Create Account Sign-up"/>
+    <title>Sign-Up for Buy Rent Sell</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body class="signUpPage">
+    <h1> Sign up</h1>
+    <form action="javascript:validateSignUpForm();" method="post">
+        <label for="firstName"> First Name: </label>
+        <input type="text" name="firstName" placeholder="First Name" />
+        <label for="lastName"> Last Name: </label>
+        <input type="text" name="lastName" placeholder="Last Name" />
+        <br />
+        <br />
+        <label for="email" class="emailLabel"> Email: </label>
+        <input type="text" name="email" placeholder="Email Address" class="email"/>
+		<p class="emailError"> Please Enter Valid Email Address.</p>
+        <br />
+        <br />
+        <label for="phoneNumber"> Phone: </label>
+        <input type="text" name="phoneNumber" placeholder="XXX" class="phoneNumber goToNext" maxlength="3"/>
+        <input type="text" name="phoneNumber" placeholder="XXX" class="phoneNumber goToNext" maxlength="3" />
+        <input type="text" name="phoneNumber" placeholder="XXXX" class="phoneNumber" maxlength="4" />
+        <br />
+        <br />
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
